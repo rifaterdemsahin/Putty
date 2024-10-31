@@ -1,3 +1,6 @@
+@rifaterdemsahin ➜ /workspaces/Putty/Symbols/terraform-aws-ec2 (main) $ terraform init
+bash: terraform: command not found
+
 
 # Download the Terraform binary
 
@@ -20,12 +23,3 @@ sudo mv terraform /usr/local/bin/
 # Verify the installation
 
 terraform -v
-
-
-@rifaterdemsahin ➜ /workspaces/Putty (main) $ terraform -v
-Terraform v1.0.11
-on linux_amd64
-
-Your version of Terraform is out of date! The latest version
-is 1.9.8. You can update by downloading from https://www.terraform.io/downloads.html
-@rifaterdemsahin ➜ /workspaces/Putty (main) $ 

@@ -17,7 +17,7 @@
     }
 
     resource "aws_instance" "poc" {
-      ami           = "ami-0c55b159cbfafe1f0" # Update with your preferred AMI
+      ami           = "ami-12345678" # Update with a valid AMI ID
       instance_type = "t2.micro"
       security_groups = [aws_security_group.ssh.name]
 

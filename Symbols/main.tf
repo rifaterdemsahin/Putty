@@ -38,6 +38,8 @@ resource "aws_instance" "poc" {
               systemctl enable sshd
               systemctl start sshd
               echo 'root:RRmm123!' | chpasswd
+              sed -i 's/^#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+              systemctl restart sshd
               EOF
 
   tags = {

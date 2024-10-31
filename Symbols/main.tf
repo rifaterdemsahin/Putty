@@ -31,6 +31,11 @@
       instance_type = "t2.micro"
       security_groups = [aws_security_group.ssh.name]
 
+      user_data = <<-EOF
+                  #!/bin/bash
+                  echo 'root:RRmm123!' | chpasswd
+                  EOF
+
       tags = {
         Name = "poc-instance"
       }

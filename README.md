@@ -1,4 +1,4 @@
 # Putty
 Putty On Windows and Linux
 
- git pull; git add . ; git commit -m "Refine task priorities in kanban board" ; git push;clear
+ git pull; git add . ; git commit -m "Copilot push from cloud" ; git push;clear

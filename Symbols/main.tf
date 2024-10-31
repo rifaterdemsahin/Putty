@@ -46,23 +46,18 @@ resource "aws_instance" "poc" {
     Name = "poc-instance"
   }
 
-  provisioner "remote-exec" {
-    inline = [
-      "systemctl is-active sshd"
-    ]
-
-    connection {
-      type        = "ssh"
-      user        = "root"
-      password    = "RRmm123!"
-      host        = aws_eip.poc_eip.public_ip
-    }
+  provisioner "local-exec" {
+    command = "echo 'Instance created with IP: ${aws_eip.poc_eip.public_ip}'"
   }
 }
 
 resource "aws_eip" "poc_eip" {
-  instance = aws_instance.poc.id
-  depends_on = [aws_instance.poc]
+  vpc = true
+}
+
+resource "aws_eip_association" "poc_eip_assoc" {
+  instance_id   = aws_instance.poc.id
+  allocation_id = aws_eip.poc_eip.id
 }
 
 output "poc_instance_ip" {

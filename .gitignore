@@ -1,6 +1,8 @@
 # Local .terraform directories
 **/.terraform/*
 .terraform/
+/Symbols/terraform-aws-ec2/
+/Symbols/terraform-aws-ec2/.terraform/
 
 # .tfstate files
 *.tfstate

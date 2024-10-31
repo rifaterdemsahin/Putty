@@ -30,7 +30,6 @@ resource "aws_instance" "poc" {
   ami           = data.aws_ami.latest_amazon_linux.id
   instance_type = "t2.micro"
   security_groups = [aws_security_group.ssh.name]
-  depends_on     = [aws_eip.poc_eip]
 
   user_data = <<-EOF
               #!/bin/bash
@@ -63,4 +62,9 @@ resource "aws_instance" "poc" {
 
 resource "aws_eip" "poc_eip" {
   instance = aws_instance.poc.id
+  depends_on = [aws_instance.poc]
+}
+
+output "poc_instance_ip" {
+  value = aws_eip.poc_eip.public_ip
 }

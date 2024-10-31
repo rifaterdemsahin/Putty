@@ -104,3 +104,71 @@ The installation of `putty-tools` succeeded after running `sudo apt-get update` 
 When you run `sudo apt-get update`, it fetches the latest package information from the repositories, making sure your system knows about the newest versions available. 📦
 
 After updating, `sudo apt-get install putty-tools` can then download and install the latest version of `putty-tools` along with any necessary dependencies. 🚀
+
+
+why do i get
+@rifaterdemsahin ➜ /workspaces/Putty (main) $ putty
+bash: putty: command not found
+@rifaterdemsahin ➜ /workspaces/Putty (main) $ 
+The `putty` command is not found because the `putty-tools` package does not include the `putty` executable. The `putty-tools` package provides command-line tools such as `pscp`, `psftp`, and `plink`.
+
+If you need the graphical `putty` application, you should install the `putty` package instead:
+
+```bash
+sudo apt-get install putty
+```
+
+After installing, you can run `putty` from the terminal.
+#
+
+@rifaterdemsahin ➜ /workspaces/Putty (main) $ putty
+bash: putty: command not found
+@rifaterdemsahin ➜ /workspaces/Putty (main) $ sudo apt-get install putty
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Suggested packages:
+  putty-doc
+The following NEW packages will be installed:
+  putty
+0 upgraded, 1 newly installed, 0 to remove and 24 not upgraded.
+Need to get 440 kB of archives.
+After this operation, 1677 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu focal/universe amd64 putty amd64 0.73-2 [440 kB]
+Fetched 440 kB in 1s (348 kB/s)
+Selecting previously unselected package putty.
+(Reading database ... 70114 files and directories currently installed.)
+Preparing to unpack .../putty_0.73-2_amd64.deb ...
+Unpacking putty (0.73-2) ...
+Setting up putty (0.73-2) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for mime-support (3.64ubuntu1) ...
+@rifaterdemsahin ➜ /workspaces/Putty (main) $ putty
+Unable to init server: Could not connect: Connection refused
+
+(putty:7733): Gtk-WARNING **: 11:15:09.645: cannot open display: 
+@rifaterdemsahin ➜ /workspaces/Putty (main) $ 
+@rifaterdemsahin ➜ /workspaces/Putty (main) $ 
+
+
+## Difference Between `putty` and `putty-tools`
+
+### `putty`
+- **Description**: `putty` is a graphical terminal emulator for SSH, Telnet, and other network protocols.
+- **Usage**: Primarily used for establishing SSH connections to remote servers.
+- **Installation**: Can be installed using the command:
+    ```bash
+    sudo apt-get install putty
+    ```
+- **Executable**: Provides the `putty` executable which opens a graphical interface.
+
+### `putty-tools`
+- **Description**: `putty-tools` is a collection of command-line tools related to PuTTY.
+- **Usage**: Includes utilities like `pscp` (secure copy), `psftp` (SFTP client), and `plink` (command-line interface to PuTTY's back ends).
+- **Installation**: Can be installed using the command:
+    ```bash
+    sudo apt-get install putty-tools
+    ```
+- **Executables**: Provides command-line tools but does not include the graphical `putty` executable.
+
+In summary, `putty` is for users who need a graphical interface to manage SSH connections, while `putty-tools` is for those who prefer command-line utilities for file transfers and other SSH-related tasks.

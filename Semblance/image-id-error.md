@@ -405,3 +405,14 @@ aws_instance.poc: Creating...
 │ 
 ╵
 @rifaterdemsahin ➜ /workspaces/Putty/Symbols (main) $ 
+
+
+aws_instance.poc: Creating...
+╷
+│ Error: creating EC2 Instance: operation error EC2: RunInstances, https response error StatusCode: 400, RequestID: 8ce6b874-669e-4c9d-94bd-3f747540d465, api error InvalidAMIID.NotFound: The image id '[ami-12345678]' does not exist
+│ 
+│   with aws_instance.poc,
+│   on main.tf line 19, in resource "aws_instance" "poc":
+│   19:     resource "aws_instance" "poc" {
+│ 
+╵

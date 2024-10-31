@@ -10,6 +10,8 @@ PuTTY is a versatile terminal emulator used for remote access to servers and net
    - **Windows**: Download the latest version from the official PuTTY website. Run the executable file to start using PuTTY.
    - **Linux**: Install PuTTY using your package manager. For example, on Debian-based systems:
      ```bash
+     sudo apt get update
+     sudo apt get putty-tools
      sudo apt-get install putty
      ```
 

@@ -30,6 +30,7 @@ resource "aws_instance" "poc" {
   ami           = data.aws_ami.latest_amazon_linux.id
   instance_type = "t2.micro"
   security_groups = [aws_security_group.ssh.name]
+  depends_on     = [aws_eip.poc_eip]
 
   user_data = <<-EOF
               #!/bin/bash

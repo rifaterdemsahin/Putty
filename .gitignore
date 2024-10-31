@@ -3,6 +3,13 @@
 .terraform/
 /Symbols/terraform-aws-ec2/
 /Symbols/terraform-aws-ec2/.terraform/
+/workspaces/Putty/Symbols/.terraform/providers/registry.terraform.io/hashicorp/aws/5.73.0/linux_amd64
+/workspaces/Putty/Symbols/.terraform/providers/registry.terraform.io/hashicorp/aws/5.73.0/linux_amd64/terraform-provider-aws_v5.73.0_x5
+/workspaces/Putty/Symbols/.terraform/providers/registry.terraform.io/hashicorp/aws/
+/workspaces/Putty/Symbols/.terraform/providers/registry.terraform.io/hashicorp/
+/workspaces/Putty/Symbols/.terraform/providers/registry.terraform.io/
+/workspaces/Putty/Symbols/.terraform/providers/
+/workspaces/Putty/Symbols/.terraform/
 
 # .tfstate files
 *.tfstate
@@ -25,3 +32,4 @@ override.tf.json
 # Include .terraformrc and terraform.rc files to prevent local settings from being shared
 .terraformrc
 terraform.rc
+Symbols/.terraform.lock.hcl

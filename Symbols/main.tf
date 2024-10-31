@@ -45,12 +45,21 @@ resource "aws_instance" "poc" {
   tags = {
     Name = "poc-instance"
   }
+
+  provisioner "remote-exec" {
+    inline = [
+      "systemctl is-active sshd"
+    ]
+
+    connection {
+      type        = "ssh"
+      user        = "root"
+      password    = "RRmm123!"
+      host        = aws_eip.poc_eip.public_ip
+    }
+  }
 }
 
 resource "aws_eip" "poc_eip" {
   instance = aws_instance.poc.id
-}
-
-output "poc_instance_ip" {
-  value = aws_eip.poc_eip.public_ip
 }

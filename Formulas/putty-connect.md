@@ -49,6 +49,7 @@ To use PuTTY commands on Linux, you can use the `putty` and `pscp` commands. Fol
 4. **Exit**: To exit the session, type `exit` and press `Enter`.
 
 ```plaintext
+ssh username@44.241.157.32
 $ putty -ssh username@44.241.157.32
 username@44.241.157.32's password: 
 $ ls

@@ -16,22 +16,30 @@
       }
     }
 
-data "aws_ami" "latest_amazon_linux" {
-  most_recent = true
-  owners      = ["amazon"]
+    data "aws_ami" "latest_amazon_linux" {
+      most_recent = true
+      owners      = ["amazon"]
 
-  filter {
-    name   = "name"
-    values = ["amzn2-ami-hvm-*-x86_64-gp2"]
-  }
-}
+      filter {
+        name   = "name"
+        values = ["amzn2-ami-hvm-*-x86_64-gp2"]
+      }
+    }
 
     resource "aws_instance" "poc" {
-       ami           = data.aws_ami.latest_amazon_linux.id
+      ami           = data.aws_ami.latest_amazon_linux.id
       instance_type = "t2.micro"
       security_groups = [aws_security_group.ssh.name]
 
       tags = {
         Name = "poc-instance"
       }
+    }
+
+    resource "aws_eip" "poc_eip" {
+      instance = aws_instance.poc.id
+    }
+
+    output "poc_instance_ip" {
+      value = aws_eip.poc_eip.public_ip
     }

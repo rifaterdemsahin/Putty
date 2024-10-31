@@ -33,3 +33,4 @@ override.tf.json
 .terraformrc
 terraform.rc
 Symbols/.terraform.lock.hcl
+Symbols/provider.tf

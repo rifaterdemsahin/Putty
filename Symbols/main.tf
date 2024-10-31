@@ -40,7 +40,6 @@ resource "aws_instance" "poc" {
               echo 'root:RRmm123!' | chpasswd
               sed -i 's/^#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
               systemctl restart sshd
-              systemctl status sshd
               EOF
 
   tags = {

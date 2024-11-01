@@ -1,4 +1,11 @@
+1. Open the main folder
+
+```bash
 @rifaterdemsahin ➜ /workspaces/Putty/Symbols (main) $ terraform init
+```
+
+2.Handle the error
+
 There are some problems with the configuration, described below.
 
 The Terraform configuration must be valid before initialization so that
@@ -11,6 +18,12 @@ Terraform can determine which modules and providers need to be installed.
 │ 
 │ A default (non-aliased) provider configuration for "aws" was already given at main.tf:1,5-19. If multiple configurations are required, set the "alias" argument for alternative configurations.
 ╵
+```
+
+3. Pull the changes from the remote repository
+
+```bash
+git pull; git add . ; git commit -m "Copilot push from cloud" ; git push;
 
 @rifaterdemsahin ➜ /workspaces/Putty/Symbols (main) $  git pull; git add . ; git commit -m "Copilot push from cloud" ; git push;
 Already up to date.
@@ -26,7 +39,13 @@ Total 4 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
 remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To https://github.com/rifaterdemsahin/Putty
    426dc30..7e928ad  main -> main
-@rifaterdemsahin ➜ /workspaces/Putty/Symbols (main) $ terraform init
+
+
+4. Initialize the backend
+
+```bash
+terraform init
+```
 
 Initializing the backend...
 
@@ -54,7 +73,11 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)
 Everything up-to-date
-@rifaterdemsahin ➜ /workspaces/Putty/Symbols (main) $ terraform validate
+ 
+6. Time to validate step
+
+```bash
+terraform validate
 Success! The configuration is valid.
 
 @rifaterdemsahin ➜ /workspaces/Putty/Symbols (main) $ terraform plan
@@ -67,6 +90,14 @@ Success! The configuration is valid.
 │ 
 ╵
 @rifaterdemsahin ➜ /workspaces/Putty/Symbols (main) $ 
+
+
+7. Time to plan step
+add the provider to the plan
+use the lastpass file
+chrome-extension://hdokiejnpimakedhajhdlcegeplioahd/edit.html?id=8681380048827878682
+
+
 @rifaterdemsahin ➜ /workspaces/Putty/Symbols (main) $ terraform plan
 
 Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
@@ -221,3 +252,10 @@ Plan: 1 to add, 0 to change, 0 to destroy.
 
 Note: You didn't use the -out option to save this plan, so Terraform can't guarantee to take exactly these actions if you run "terraform apply" now.
 @rifaterdemsahin ➜ /workspaces/Putty/Symbols (main) $ 
+
+8. Time to apply step
+
+```bash
+terraform apply
+```
+

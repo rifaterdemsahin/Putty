@@ -45,3 +45,6 @@ This guide provides a hands-on implementation of using PuTTY, a free and open-so
 
 ## Conclusion
 This guide covered the basic steps to connect to a remote server using PuTTY and perform common tasks. For more advanced usage, refer to the [PuTTY documentation](https://the.earth.li/~sgtatham/putty/latest/htmldoc/).
+
+
+

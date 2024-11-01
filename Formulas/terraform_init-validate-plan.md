@@ -259,3 +259,9 @@ Note: You didn't use the -out option to save this plan, so Terraform can't guara
 terraform apply
 ```
 
+9. Time to destroy step
+after successfull apply
+
+```bash
+terraform destroy
+```

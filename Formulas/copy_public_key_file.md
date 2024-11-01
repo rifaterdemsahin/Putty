@@ -19,3 +19,10 @@ Make sure you run the command from the directory where `id_ed25519.pub` is locat
 ```powershell
 New-Item -ItemType Directory -Path "C:\projects\Putty\Symbols"
 ```
+
+### Change Directory to SSH Keys Location
+
+Before copying the `id_ed25519.pub` file, navigate to the directory where the SSH keys are located. Use the following commands:
+
+### Using PowerShell
+ C:\Users\Pexabo\.ssh

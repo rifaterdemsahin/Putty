@@ -5,25 +5,30 @@
 
 ```mermaid
 graph TD
-    A[Start] --> B[Install and Configure Terraform]
-    B --> C[Create Terraform Configuration]
-    C --> D[Set up AWS Provider in Terraform]
-    D --> E[Define AWS EC2 Instance Resource]
-    E --> F[Add SSH Key Configuration for Access]
-    F --> G[Run Terraform Init and Apply]
-    G --> H{AWS EC2 Instance Created?}
-    H -->|Yes| I[Retrieve Public IP of Instance]
-    H -->|No| Z[Check Configuration]
-    I --> J[Install PuTTY on Local Windows Workstation]
-    J --> K[Generate .ppk Key for PuTTY Authentication]
-    K --> L[Connect to EC2 via SSH Using PuTTY]
-    L --> M[Use PuTTY Secure Copy PSCP for File Transfer]
-    M --> N[Transfer Test Automation Code to EC2]
-    N --> O[Run Test Automation Code on EC2]
-    O --> P[Check and Validate Results]
-    P --> Q[End]
+    A[Start] --> B[Install Terraform]
+    B --> C[Configure Terraform]
+    C --> D[Create Terraform Configuration Files]
+    D --> E[Add Variables and tfvars to .gitignore]
+    E --> F[Set up AWS Provider in Terraform]
+    F --> G[Save AWS Credentials to terraform.tfvars]
+    G --> H[Define AWS EC2 Instance Resource]
+    H --> I[Specify Instance Type, OS, and Region]
+    I --> J[Add SSH Key Configuration for Access]
+    J --> K[Run Terraform Init]
+    K --> L[Run Terraform Apply]
+    L --> M{AWS EC2 Instance Created?}
+    M -->|Yes| N[Retrieve Public IP of Instance]
+    M -->|No| Z[Check Configuration]
+    N --> O[Install PuTTY on Local Windows Workstation]
+    O --> P[Generate .ppk Key for PuTTY Authentication]
+    P --> Q[Connect to EC2 via SSH Using PuTTY]
+    Q --> R[Use PuTTY Secure Copy PSCP for File Transfer]
+    R --> S[Transfer Test Automation Code to EC2]
+    S --> T[Run Test Automation Code on EC2]
+    T --> U[Check and Validate Results]
+    U --> V[End]
 
-    Z --> C
+    Z --> D
 ```
 
 ### Explanation of Steps

@@ -37,3 +37,6 @@ Symbols/provider.tf
 Symbols/id_ed25519.pub
 Symbols/id_ed25519
 Symbols/id_ed25519.ppk
+Symbols/awscliv2.zip
+Symbols/aws/
+Symbols/aws/awscliv2.zip

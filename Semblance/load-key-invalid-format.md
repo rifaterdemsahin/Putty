@@ -1,0 +1,1 @@
+@rifaterdemsahin ➜ /workspaces/Putty/Symbols (main) $ ssh -i ./id_ed25519 ec2-user@44.237.75.161

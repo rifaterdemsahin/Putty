@@ -1,7 +1,7 @@
 resource "aws_security_group" "ssh" {
   name_prefix = "poc-ssh-"
 
-  key_name = "id_ed25519.pub"  # replace with your existing key pair name from the terraform.tfvars file
+  key_name = var.key_name
 
   ingress {
     from_port   = 22

@@ -25,4 +25,4 @@ Documentation for the Promethues as DataSource Project
 - 
 
 git pull; git add . && git commit -m "Codespace cloud commit" && git push;clear.exe 
-git pull; git add . && git commit -m "Local Workstation commit" && git push;clear.exe 
+git pull; git add . ; git commit -m "Local Workstation Windows commit" ; git push;clear

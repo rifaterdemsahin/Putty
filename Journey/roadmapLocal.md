@@ -6,12 +6,12 @@
 ```mermaid
 graph TD
     A[Start] --> B[Install Terraform]
-    B --> C[Configure Terraform]
+    B --> C[Configure Terraform in the symbols folder]
     C --> D[Create Terraform Configuration Files]
     D --> E[Add Variables and tfvars to .gitignore]
-    E --> F[Set up AWS Provider in Terraform]
+    E --> F[Setup aws cli and do aws configure Set up AWS Provider in Terraform]
     F --> G[Save AWS Credentials to terraform.tfvars]
-    G --> H[Define AWS EC2 Instance Resource]
+    G --> H[Define AWS EC2 Instance Resource check if it is running in the symbols folder]
     H --> I[Specify Instance Type, OS, and Region]
     I --> J[Add SSH Key Configuration for Access]
     J --> K[Run Terraform Init]

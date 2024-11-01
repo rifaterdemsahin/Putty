@@ -1,7 +1,12 @@
+variable "key_name" {
+  description = "Name of the SSH key pair to use for the EC2 instance"
+  type        = string
+}
+
 resource "aws_security_group" "ssh" {
   name_prefix = "poc-ssh-"
 
-  key_name = var.key_name
+
 
   ingress {
     from_port   = 22
@@ -32,7 +37,7 @@ resource "aws_instance" "poc" {
   ami           = data.aws_ami.latest_amazon_linux.id
   instance_type = "t2.micro"
   security_groups = [aws_security_group.ssh.name]
-
+  key_name = var.key_name
   user_data = <<-EOF
               #!/bin/bash
               yum update -y

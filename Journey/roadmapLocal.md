@@ -10,7 +10,7 @@ graph TD
     C --> D[Create Terraform Configuration Files]
     D --> E[Add Variables and tfvars to .gitignore]
     E --> F[Setup aws cli and do aws configure Set up AWS Provider in Terraform]
-    F --> G[Save AWS Credentials to terraform.tfvars]
+    F --> G[Save AWS Credentials to terraform.tfvars aws key name as the private one setting in tfvars file]
     G --> H[Define AWS EC2 Instance Resource check if it is running in the symbols folder]
     H --> I[Specify Instance Type, OS, and Region]
     I --> J[Add SSH Key Configuration for Access]

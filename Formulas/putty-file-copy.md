@@ -8,6 +8,7 @@ To copy a file using Putty from your local machine to a remote server, you can u
 pscp /workspaces/Putty/Symbols/astoryofadevopsengineer.md user@44.237.75.161:/path/to/destination/
 pscp /workspaces/Putty/Symbols/astoryofadevopsengineer.md ec2-user@44.237.75.161:/
 
+pscp /workspaces/Putty/Symbols/astoryofadevopsengineer.md ec2-user@44.237.75.161:/ -i ./id_ed25519
 ```
 
 Replace `/path/to/destination/` with the actual path where you want to copy the file on the remote server.

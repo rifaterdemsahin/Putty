@@ -34,3 +34,4 @@ override.tf.json
 terraform.rc
 Symbols/.terraform.lock.hcl
 Symbols/provider.tf
+Symbols/id_ed25519.pub

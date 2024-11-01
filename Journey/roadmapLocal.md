@@ -1,4 +1,7 @@
-Here’s a mermaid chart outlining a high-level flow for implementing a Terraform configuration to set up an AWS server with SSH, then using PuTTY for file transfer and test automation:
+# Roadmap
+
+- Mermaid chart outlining a high-level flow for implementing a Terraform configuration to set up an AWS server with SSH, then using PuTTY for file transfer and test automation:
+
 
 ```mermaid
 graph TD
@@ -14,7 +17,7 @@ graph TD
     I --> J[Install PuTTY on Local Windows Workstation]
     J --> K[Generate .ppk Key for PuTTY Authentication]
     K --> L[Connect to EC2 via SSH Using PuTTY]
-    L --> M[Use PuTTY Secure Copy (PSCP) for File Transfer]
+    L --> M[Use PuTTY Secure Copy PSCP for File Transfer]
     M --> N[Transfer Test Automation Code to EC2]
     N --> O[Run Test Automation Code on EC2]
     O --> P[Check and Validate Results]

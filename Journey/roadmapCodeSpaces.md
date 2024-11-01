@@ -1,4 +1,4 @@
-Here’s a mermaid chart outlining a high-level flow for implementing a Terraform configuration to set up an AWS server with SSH, then using PuTTY for file transfer and test automation:
+update local to codespaces environment temporal server in github codespaces
 
 ```mermaid
 graph TD

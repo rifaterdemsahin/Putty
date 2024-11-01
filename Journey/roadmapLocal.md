@@ -18,7 +18,7 @@ graph TD
     K --> L[Run Terraform Apply]
     L --> M{AWS EC2 Instance Created?}
     M -->|Yes| N[Retrieve Public IP of Instance]
-    M -->|No| Z[Check Configuration]
+    M -->|No| Z[Check Configuration , first check with basic ssh login and dont use root but use ec2-user]
     N --> O[Install PuTTY on Local Windows Workstation]
     O --> P[Generate .ppk Key for PuTTY Authentication]
     P --> Q[Connect to EC2 via SSH Using PuTTY]
